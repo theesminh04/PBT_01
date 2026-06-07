@@ -1,0 +1,112 @@
+Thiết kế cấu trúc<!DOCTYPE html> <!-- Khai báo HTML5 -->
+<html lang="vi"> <!-- html: phần gốc của tài liệu, xác định ngôn ngữ -->
+<head> <!-- head: chứa metadata và cấu hình -->
+    <meta charset="UTF-8"> <!-- meta: định dạng ký tự -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- meta: responsive -->
+    <title>Chi tiết sản phẩm</title> <!-- title: tiêu đề trang -->
+    <style> /* style: CSS nội bộ tối giản */
+        body { font-family: Arial; margin: 0; }
+        header, nav, main, aside, footer { padding: 10px; border: 1px solid #ccc; margin: 5px; }
+        .container { display: flex; }
+        .main-content { flex: 3; }
+        aside { flex: 1; }
+        .product-images { display: flex; }
+        .thumbnails { display: flex; flex-direction: column; }
+        .thumbnails img { width: 50px; margin: 2px; }
+        .main-image img { width: 200px; }
+        table { width: 100%; border-collapse: collapse; }
+        table, th, td { border: 1px solid #999; }
+        .similarItem {width: 10%; height: 10%;}
+    </style>
+</head>
+<body> <!-- body: chứa toàn bộ nội dung hiển thị -->
+
+<header> <!-- header: phần đầu trang -->
+    <h1>Logo / Shop</h1> <!-- h1: tiêu đề chính -->
+</header>
+
+<nav aria-label="breadcrumb"> <!-- nav: điều hướng breadcrumb -->
+    <p>Trang chủ > Điện thoại > iPhone 16</p> <!-- p: văn bản breadcrumb -->
+</nav>
+
+<div class="container"> <!-- div: container layout chính -->
+
+    <main class="main-content"> <!-- main: nội dung chính -->
+
+        <section class="product-images"> <!-- section: khu vực ảnh sản phẩm -->
+            <div class="thumbnails"> <!-- div: nhóm ảnh nhỏ -->
+                <img src="ip15.jpg" alt="thumb1"> <!-- img: ảnh thumbnail -->
+                <img src="ip15prm.png" alt="thumb2"> <!-- img -->
+                <img src="ip17air.jpg" alt="thumb3"> <!-- img -->
+                <img src="ip17.jpg" alt="thumb4"> <!-- img -->
+            </div>
+            <div class="main-image"> <!-- div: ảnh chính -->
+                <img src="ip17trang.jpeg" alt="main"> <!-- img -->
+            </div>
+        </section>
+
+        <section> <!-- section: thông tin sản phẩm -->
+            <h2>Tên sản phẩm</h2> <!-- h2: tiêu đề sản phẩm -->
+            <p>Giá tiền</p> <!-- p: giá -->
+            <p>★★★★★</p> <!-- p: đánh giá -->
+            <p>Mô tả ngắn</p> <!-- p: mô tả -->
+        </section>
+
+        <section> <!-- section: bảng thông số -->
+            <h3>Thông số kỹ thuật</h3> <!-- h3: tiêu đề -->
+            <table> <!-- table: bảng dữ liệu -->
+                <tr> <!-- tr: hàng -->
+                    <th>Thông số</th> <!-- th: tiêu đề cột -->
+                    <th>Giá trị</th> <!-- th -->
+                </tr>
+                <tr>
+                    <td>CPU</td> <!-- td: dữ liệu -->
+                    <td>Placeholder</td>
+                </tr>
+                <tr>
+                    <td>RAM</td>
+                    <td>Placeholder</td>
+                </tr>
+                <tr>
+                    <td>Pin</td>
+                    <td>Placeholder</td>
+                </tr>
+            </table>
+        </section>
+
+        <section> <!-- section: đánh giá -->
+            <h3>Đánh giá / Bình luận</h3> <!-- h3 -->
+            <article> <!-- article: 1 bình luận -->
+                <p>Người dùng A: Bình luận...</p> <!-- p -->
+            </article>
+            <article>
+                <p>Người dùng B: Bình luận...</p>
+            </article>
+        </section>
+
+    </main>
+
+    <aside> <!-- aside: sidebar -->
+        <h3>Sản phẩm tương tự</h3> <!-- h3 -->
+        <div> <!-- div: sản phẩm 1 -->
+            <img class="similarItem" src="ip15.jpg" alt="sp1"> <!-- img -->
+            <p>Tên sản phẩm</p> <!-- p -->
+        </div>
+        <div>
+            <img class="similarItem" src="ip17.jpg" alt="sp2">
+            <p>Tên sản phẩm</p>
+        </div>
+        <div>
+            <img class="similarItem" src="ip17air.jpg" alt="sp3">
+            <p>Tên sản phẩm</p>
+        </div>
+    </aside>
+
+</div>
+
+<footer> <!-- footer: chân trang -->
+    <p>Thông tin liên hệ / Footer</p> <!-- p -->
+</footer>
+
+</body>
+</html>
